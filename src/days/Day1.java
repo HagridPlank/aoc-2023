@@ -42,11 +42,15 @@ public class Day1 extends Day{
 
                 if (chr > 47 && chr < 58) {
                     nums.add(chr - 48);
-                }
-
-                for (Map.Entry<String, Integer> spelledNum : spelledNums.entrySet()) {
-                    if (str.startsWith(spelledNum.getKey())) {
-                        nums.add(spelledNums.get(spelledNum.getKey()));
+                } else {
+                    for (Map.Entry<String, Integer> spelledNum : spelledNums.entrySet()) {
+                        if (str.startsWith(spelledNum.getKey())) {
+                            nums.add(spelledNum.getValue());
+                            System.out.println(i);
+                            System.out.println(spelledNum.getKey());
+                            i += spelledNum.getKey().length() - 2;
+                            System.out.println(i);
+                        }
                     }
                 }
             }
