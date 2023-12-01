@@ -46,10 +46,7 @@ public class Day1 extends Day{
                     for (Map.Entry<String, Integer> spelledNum : spelledNums.entrySet()) {
                         if (str.startsWith(spelledNum.getKey())) {
                             nums.add(spelledNum.getValue());
-                            System.out.println(i);
-                            System.out.println(spelledNum.getKey());
                             i += spelledNum.getKey().length() - 2;
-                            System.out.println(i);
                         }
                     }
                 }
