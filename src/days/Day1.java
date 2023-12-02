@@ -2,14 +2,15 @@ package days;
 
 import java.util.*;
 
-public class Day1 extends Day{
+public class Day1 extends Day {
+    private final List<String> lines = getFileLines();
+
     public Day1(String filePath) {
         super(filePath);
     }
 
     @Override
     public int doPart1() {
-        List<String> lines = getFileLines();
         int total = 0;
 
         for (String line : lines) {
@@ -29,7 +30,6 @@ public class Day1 extends Day{
 
     @Override
     public int doPart2() {
-        List<String> lines = getFileLines();
         Map<String, Integer> spelledNums = craftSpelledNums();
         int total = 0;
 
