@@ -32,7 +32,7 @@ public class Main {
                 System.out.println("This day has not been completed yet or does not exist, use 0 to exit.");
             } catch (InputMismatchException ignored) {
                 System.out.println("Invalid input, use 0 to exit.");
-                s.next();
+                s.nextLine();
             }
         } while(true);
     }
