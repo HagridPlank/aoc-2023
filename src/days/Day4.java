@@ -17,22 +17,8 @@ public class Day4 extends Day {
     public int doPart1() {
         int points = 0;
 
-        for (String line : fileLines) {
-            String[] parsedLine = line.split(":")[1].split("\\|");
-            String[] winningNums = parsedLine[0].trim().split(" \s*");
-            String[] myNums = parsedLine[1].trim().split(" \s*");
-
-            int matched = 0;
-
-            for (String winningNum : winningNums) {
-                for (String myNum : myNums) {
-                    if (winningNum.equals(myNum)) {
-                        matched++;
-                    }
-                }
-            }
-
-            points += (matched == 0) ? 0 : Math.pow(2, matched - 1);
+        for (int matches : cardToWins.values()) {
+            points += (matches == 0) ? 0 : Math.pow(2, matches - 1);
         }
 
         return points;
@@ -40,7 +26,6 @@ public class Day4 extends Day {
 
     @Override
     public int doPart2() {
-        System.out.println(cardToWins);
         for (int i = 1; i <= fileLines.size(); i++) {
             calcCard(i);
         }
