@@ -11,7 +11,6 @@ public class Day3 extends Day {
     public Day3(String filePath) {
         super(filePath);
         findNumsAndSymbols();
-
     }
 
     @Override
