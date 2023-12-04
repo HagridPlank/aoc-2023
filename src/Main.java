@@ -23,15 +23,17 @@ public class Main {
                 Object o = c.getConstructor(String.class).newInstance(path);
                 // Cast the object to a Day
                 Day d = (Day) o;
-                System.out.printf("Part 1: %d\nPart 2: %d%n", d.doPart1(), d.doPart2());
+
+                long t0 = System.currentTimeMillis();
+                System.out.printf("Part 1: %d\nPart 2: %d\nTime (ms): %d\n\n", d.doPart1(), d.doPart2(), System.currentTimeMillis() - t0);
 
             } catch (NoSuchMethodException | InvocationTargetException |
                      InstantiationException | IllegalAccessException e) {
                 e.printStackTrace();
             } catch (ClassNotFoundException e) {
-                System.out.println("This day has not been completed yet or does not exist, use 0 to exit.");
+                System.out.println("This day has not been completed yet or does not exist, use 0 to exit.\n");
             } catch (InputMismatchException ignored) {
-                System.out.println("Invalid input, use 0 to exit.");
+                System.out.println("Invalid input, use 0 to exit.\n");
                 s.nextLine();
             }
         } while(true);
