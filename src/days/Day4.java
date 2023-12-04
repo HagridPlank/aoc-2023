@@ -50,15 +50,12 @@ public class Day4 extends Day {
     private void calcCard(int card) {
         cardCount++;
         for (int i = 1; i <= cardToWins.get(card); i++) {
-            System.out.printf("Card: %d    Called: %d\n", card, i + card);
             calcCard(i + card);
         }
     }
 
     private void craftCardToWins() {
         cardToWins = new HashMap<>();
-
-        int points = 0;
 
         for (String line : fileLines) {
             String[] parsedLine = line.split(":");
