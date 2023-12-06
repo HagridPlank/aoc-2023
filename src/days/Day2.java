@@ -10,7 +10,7 @@ public class Day2 extends Day {
     }
 
     @Override
-    public int doPart1() {
+    public long doPart1() {
         int sum = 0;
 
         for (String line : lines) {
@@ -44,7 +44,7 @@ public class Day2 extends Day {
     }
 
     @Override
-    public int doPart2() {
+    public long doPart2() {
         int sum = 0;
 
         for (String line : lines) {

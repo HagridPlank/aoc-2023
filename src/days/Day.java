@@ -23,6 +23,6 @@ public abstract class Day {
         return fileLines;
     }
 
-    public abstract int doPart1();
-    public abstract int doPart2();
+    public abstract long doPart1();
+    public abstract long doPart2();
 }

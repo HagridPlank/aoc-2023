@@ -14,7 +14,7 @@ public class Day4 extends Day {
     }
 
     @Override
-    public int doPart1() {
+    public long doPart1() {
         int points = 0;
 
         for (int matches : cardToWins.values()) {
@@ -25,7 +25,7 @@ public class Day4 extends Day {
     }
 
     @Override
-    public int doPart2() {
+    public long doPart2() {
         for (int i = 1; i <= fileLines.size(); i++) {
             calcCard(i);
         }

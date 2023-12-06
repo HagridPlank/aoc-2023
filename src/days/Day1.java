@@ -10,7 +10,7 @@ public class Day1 extends Day {
     }
 
     @Override
-    public int doPart1() {
+    public long doPart1() {
         int total = 0;
 
         for (String line : lines) {
@@ -29,7 +29,7 @@ public class Day1 extends Day {
     }
 
     @Override
-    public int doPart2() {
+    public long doPart2() {
         Map<String, Integer> spelledNums = craftSpelledNums();
         int total = 0;
 
